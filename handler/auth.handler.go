@@ -1,6 +1,10 @@
 package handler
 
 import (
+	"log"
+	"time"
+
+	"github.com/dgrijalva/jwt-go"
 	"github.com/go-playground/validator/v10"
 	database "github.com/gochujjang/loker-express/database"
 	"github.com/gochujjang/loker-express/models/entity"
@@ -33,7 +37,7 @@ func LoginHandler(ctx *fiber.Ctx) error {
 	}
 
 	//check password
-	isValid := utils.CheckPasswordHash(loginRequest.Password, user.Password) 
+	isValid := utils.CheckPasswordHash(loginRequest.Password, user.Password)
 
 	if !isValid {
 		return ctx.Status(fiber.StatusUnauthorized).JSON(fiber.Map{
@@ -41,7 +45,22 @@ func LoginHandler(ctx *fiber.Ctx) error {
 		})
 	}
 
+	// generate jwt
+	claims := jwt.MapClaims{}
+	claims["name"] = user.Name
+	claims["email"] = user.Email
+	claims["phone"] = user.Phone
+	claims["exp"] = time.Now().Add(time.Minute * 2).Unix()
+
+	token, errGenerateToken := utils.GenerateToken(&claims)
+	if errGenerateToken != nil {
+		log.Println(errGenerateToken)
+		return ctx.Status(fiber.StatusUnauthorized).JSON(fiber.Map{
+			"message": "wrong credential",
+		})
+	}
+
 	return ctx.JSON(fiber.Map{
-		"token": "secret",
+		"token": token,
 	})
 }
