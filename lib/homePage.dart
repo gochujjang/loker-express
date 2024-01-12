@@ -8,6 +8,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'assets/colors/colors.dart';
+import 'widgets/navbar.dart';
 
 class HomePage extends StatelessWidget {
   static const imagePath = "assets/images/banner_homepage.png";
@@ -65,7 +66,7 @@ class HomePage extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
+                        backgroundColor: MaterialStatePropertyAll<Color>(
                             AppColors.darkGreen),
                         fixedSize: MaterialStateProperty.all(Size(365, 65)),
                         shape: MaterialStateProperty.all(
@@ -281,10 +282,24 @@ class HomePage extends StatelessWidget {
                     fontWeight: FontWeight.w500),
               ),
             ),
-            Row(
-              children: [
-                
-              ],
+            Padding(
+              padding: EdgeInsets.only(left: 100),
+              child: Column(
+                children: [
+                  const Text(
+                      "Buat Akun Terlebih Dahulu Jika Belum Punya",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 28,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ElevatedButton(onPressed: (){}, child: const Text(
+                    "Daftar",
+
+                  ))
+                ],
+              ),
             )
           ],
         ),
@@ -292,6 +307,9 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
+
 
 class Heading extends StatelessWidget {
   final String text;
@@ -311,75 +329,4 @@ class Heading extends StatelessWidget {
   }
 }
 
-class Navbar extends StatefulWidget {
-  const Navbar({Key? key}) : super(key: key);
-  @override
-  State<Navbar> createState() => _NavbarState();
-}
 
-class _NavbarState extends State<Navbar> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(100, 15, 0, 15),
-                child: Heading(text: 'LokerExpress'),
-              ),
-              Row(
-                children: [
-                  Padding(
-                      padding: EdgeInsets.fromLTRB(12, 15, 12, 15),
-                      child: ElevatedButton(
-                          onPressed: () {},
-                          style: ButtonStyle(
-                              side: MaterialStateProperty.all(BorderSide(
-                                  color: AppColors.darkGreen, width: 2.0))),
-                          child: const Text(
-                            'Daftar',
-                            style: TextStyle(
-                              color: AppColors.darkGreen,
-                              fontFamily: 'Poppins',
-                              fontSize: 24,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ))),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(12, 15, 100, 15),
-                    child: ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                            side: MaterialStateProperty.all(BorderSide(
-                                color: AppColors.darkGreen, width: 2.0))),
-                        child: const Text('Masuk',
-                            style: TextStyle(
-                              color: AppColors.darkGreen,
-                              fontFamily: 'Poppins',
-                              fontSize: 24,
-                              fontWeight: FontWeight.w600,
-                            ))),
-                  ),
-                ],
-              )
-            ],
-          )
-        ],
-      ),
-    );
-  }
-}
-
-
-class circle extends CustomPaint{
-  @override
-  void paint(Canvas canvas, Size size){
-    var width2 = (size.width/2);
-    var height2 = (size.height/2);
-    
-
-  }
-}
