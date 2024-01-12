@@ -7,6 +7,7 @@ import (
 	database "github.com/gochujjang/loker-express/database"
 	"github.com/gochujjang/loker-express/models/entity"
 	"github.com/gochujjang/loker-express/models/request"
+	"github.com/gochujjang/loker-express/utils"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -70,6 +71,16 @@ func UserHandlerCreate(ctx *fiber.Ctx) error {
 		NoKtp:     user.NoKtp,
 		Marriage:  user.Marriage,
 	}
+
+	hashedPassword, err := utils.HashingPassword(user.Password)
+	if err != nil {
+		log.Println(err)
+		return ctx.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
+			"message": "internal lserver error",
+		})
+	}
+
+	newUser.Password = hashedPassword
 
 	errCreateUser := database.DB.Create(&newUser).Error
 	if errCreateUser != nil {
