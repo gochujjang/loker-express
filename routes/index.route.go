@@ -9,9 +9,9 @@ import (
 func RouteInit(r *fiber.App) {
 
 	r.Post("/login", handler.LoginHandler)
+	r.Post("/register", handler.UserHandlerCreate)
 
 	r.Get("/user", middleware.Auth, handler.UserHandlerGetAll)
 	r.Get("/user/:id", middleware.Auth, handler.UserHandlerGetById)
-	r.Post("/user", handler.UserHandlerCreate)
 	r.Put("/user/:id", middleware.Auth, handler.UserHandlerUpdate)
 }
