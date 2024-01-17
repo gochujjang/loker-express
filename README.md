@@ -9,7 +9,7 @@ LoginPage
 Register
 
 Tim Chipi Chipi
-- Rehan Kurnia Hidayat
-- Ali Achmad Davianto
 - Ghina Desrizkymalia Zahirah
+- Ali Achmad Davianto
+- Rehan Kurnia Hidayat
 - Aldi Murad Rifdiansyah
