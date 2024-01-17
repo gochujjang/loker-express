@@ -10,7 +10,9 @@ import (
 func main() {
 	database.DatabaseInit()
 	migration.RunMigration()
-	
+	migration.SeedAdminUser()
+	migration.SeedCompanies()
+
 	app := fiber.New()
 
 	// Initial Route

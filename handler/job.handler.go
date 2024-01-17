@@ -43,8 +43,21 @@ func JobHandlerCreate(ctx *fiber.Ctx) error {
 		Desc:      job.Desc,
 	}
 
+	result := database.DB.Create(&newJob)
+	if result.Error != nil {
+		log.Println(result.Error)
+		return ctx.Status(500).JSON(fiber.Map{
+			"message": "failed",
+			"error":   "Failed to create job",
+		})
+	}
+
+	// Preload the associated company data
+	database.DB.Preload("Company").Find(&newJob)
+
 	return ctx.JSON(fiber.Map{
 		"message": "success",
 		"data":    newJob,
 	})
+
 }

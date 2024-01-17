@@ -3,9 +3,10 @@ package response
 import "time"
 
 type JobResponse struct {
-	ID        uint   `json:"id"`
-	Position  string `json:"position"`
-	CompanyID uint   `json:"company_id"`
+	ID        uint            `json:"id"`
+	Position  string          `json:"position"`
+	CompanyID uint            `json:"company_id"`
+	Company   []CompanyResponse `json:"company"`
 	// Company []Company `gorm:"foreignKey:ID,constraint:OnUpdate:CASCADE,OnDelete:SET NULL"`
 
 	Desc        string `json:"desc"`
