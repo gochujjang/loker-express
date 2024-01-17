@@ -11,15 +11,22 @@ import (
 )
 
 func JobHandlerGetAll(ctx *fiber.Ctx) error {
-	// userInfo := ctx.Locals("userInfo")
-	// log.Println("user info dataa :: ", userInfo)
-
 	var jobs []entity.Job
-	result := database.DB.Debug().Find(&jobs)
+
+	// Retrieve jobs with associated company information
+	result := database.DB.Preload("Company").Debug().Find(&jobs)
 	if result.Error != nil {
 		log.Println(result.Error)
+		return ctx.Status(500).JSON(fiber.Map{
+			"message": "failed",
+			"error":   "Failed to retrieve jobs",
+		})
 	}
-	return ctx.JSON(jobs)
+
+	return ctx.JSON(fiber.Map{
+		"message": "success",
+		"data":    jobs,
+	})
 }
 
 func JobHandlerCreate(ctx *fiber.Ctx) error {
@@ -38,9 +45,11 @@ func JobHandlerCreate(ctx *fiber.Ctx) error {
 	}
 
 	newJob := entity.Job{
-		Position:  job.Position,
-		CompanyID: job.CompanyID,
-		Desc:      job.Desc,
+		Position:    job.Position,
+		CompanyID:   job.CompanyID,
+		Desc:        job.Desc,
+		Requirement: job.Requirement,
+		Benefit:     job.Benefit,
 	}
 
 	result := database.DB.Create(&newJob)
