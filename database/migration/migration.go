@@ -8,8 +8,11 @@ import (
 	"github.com/gochujjang/loker-express/models/entity"
 )
 
-func RunMigration()  {
-	err := database.DB.AutoMigrate(&entity.User{})
+func RunMigration() {
+	err := database.DB.AutoMigrate(
+		&entity.User{},
+		&entity.Job{},
+	)
 	if err != nil {
 		log.Println(err)
 	}
