@@ -67,12 +67,12 @@ func UserHandlerCreate(ctx *fiber.Ctx) error {
 	}
 
 	newUser := entity.User{
-		Name:      user.Name,
-		Email:     user.Email,
-		Phone:     user.Phone,
-		Education: user.Education,
-		NoKtp:     user.NoKtp,
-		Marriage:  user.Marriage,
+		Name:  user.Name,
+		Email: user.Email,
+		Phone: user.Phone,
+		// Education: user.Education,
+		// NoKtp:     user.NoKtp,
+		// Marriage:  user.Marriage,
 	}
 
 	hashedPassword, err := utils.HashingPassword(user.Password)

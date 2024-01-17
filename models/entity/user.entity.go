@@ -8,13 +8,14 @@ import (
 
 type User struct {
 	ID        uint           `json:"id" gorm:"primaryKey"`
-	Name      string         `json:"name"`
-	Email     string         `json:"email"`
-	Password  string         `json:"-" gorm:"column:password"`
-	Phone     string         `json:"phone"`
+	Name      string         `json:"name" gorm:"not null"`
+	Email     string         `json:"email" gorm:"not null;unique"`
+	Password  string         `json:"-" gorm:"column:password; not null"`
+	Phone     string         `json:"phone" gorm:"not null"`
 	Education string         `json:"education"`
 	Marriage  string         `json:"marriage"`
 	NoKtp     string         `json:"noktp"`
+	Role      string         `json:"role" gorm:"default:user"`
 	CreatedAt time.Time      `json:"created_at"`
 	UpdatedAt time.Time      `json:"updated_at"`
 	DeletedAt gorm.DeletedAt `json:"-" gorm:"index, column:deleted_at"`

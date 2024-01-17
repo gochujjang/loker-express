@@ -5,9 +5,9 @@ type UserCreateRequest struct {
 	Email     string `json:"email" validate:"required"`
 	Password     string `json:"password" validate:"required"`
 	Phone     string `json:"phone" validate:"required"`
-	Education string `json:"education"`
-	Marriage  string `json:"marriage"`
-	NoKtp     string `json:"noktp"`
+	// Education string `json:"education"`
+	// Marriage  string `json:"marriage"`
+	// NoKtp     string `json:"noktp"`
 }
 
 type UserUpdateRequest struct {
