@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         '/userProfile': (context) => userProfile(),
         '/detailPekerjaan': (context) => DetailPekerjaan(),
         '/detailPelatihan': (context) => detailPelatihan(),
-        '/programPekerjaan': (context) => programPekerjaan(),
+        '/programPekerjaan': (context) => ProgramPekerjaan(),
       },
     );
   }
