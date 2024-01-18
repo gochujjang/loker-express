@@ -13,6 +13,7 @@ func RunMigration() {
 		&entity.User{},
 		&entity.Job{},
 		&entity.Company{},
+		&entity.Activity{},
 	)
 	if err != nil {
 		log.Println(err)

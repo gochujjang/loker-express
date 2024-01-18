@@ -18,4 +18,6 @@ func RouteInit(r *fiber.App) {
 	r.Get("/job", handler.JobHandlerGetAll)
 	r.Post("/job", handler.JobHandlerCreate)
 
+	r.Get("/activity", handler.ActivityHandlerGetAll)
+	r.Post("/activity", handler.ActHandlerCreate)
 }
