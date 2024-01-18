@@ -12,3 +12,6 @@ Api Endpoint List<br>
 
 `GET /job` - Get all user<br>
 `POST /job` - create job<br>
+
+`GET /activity` - Get all activity<br>
+`POST /activity` - create activity<br>
