@@ -247,48 +247,50 @@ class HomePage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Card(
-                          color: Colors.white,
-                          elevation: 10,
-                          child: SizedBox(
-                              width: 400,
-                              height: 400,
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 36),
-                                child: Column(
-                                  children: [
-                                    Padding(
-                                        padding: const EdgeInsets.only(
-                                          top: 32,
-                                          bottom: 32,
-                                        ),
-                                        child: Image.asset(
-                                          "lib/assets/teacher-hiring.png",
-                                          width: 120,
-                                          height: 120,
-                                          alignment: Alignment.center,
-                                        )),
-                                    const Padding(
-                                      padding: EdgeInsets.only(bottom: 32),
-                                      child: Text(
-                                        "Peluang Berwirausaha",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
+                        color: Colors.white,
+                        elevation: 10,
+                        child: SizedBox(
+                          width: 400,
+                          height: 400,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 36),
+                            child: Column(
+                              children: [
+                                Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 32,
+                                      bottom: 32,
                                     ),
-                                    const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 37, right: 37),
-                                        child: Text(
-                                          "Sektor pertanian memberikan platform bagi individu untuk menjelajahi usaha berwirausaha.",
-                                          textAlign: TextAlign.center,
-                                        ))
-                                  ],
+                                    child: Image.asset(
+                                      "lib/assets/teacher-hiring.png",
+                                      width: 120,
+                                      height: 120,
+                                      alignment: Alignment.center,
+                                    )),
+                                const Padding(
+                                  padding: EdgeInsets.only(bottom: 32),
+                                  child: Text(
+                                    "Peluang Berwirausaha",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
                                 ),
-                              ))),
+                                const Padding(
+                                    padding:
+                                        EdgeInsets.only(left: 37, right: 37),
+                                    child: Text(
+                                      "Sektor pertanian memberikan platform bagi individu untuk menjelajahi usaha berwirausaha.",
+                                      textAlign: TextAlign.center,
+                                    ))
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -310,136 +312,148 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.w500),
                   ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(
                         width: 100,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const SizedBox(
-                                height: 46,
-                              ),
-                              Text(
-                                "Buat Akun Terlebih Dahulu Jika Belum Punya",
-                                style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 28,
+                      Container(
+                        margin: const EdgeInsets.only(top: 60),
+                        width: 3,
+                        height: 550,
+                        decoration: BoxDecoration(color: Colors.black),
+                      ),
+                      const SizedBox(
+                        width: 100,
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(
+                                  height: 46,
                                 ),
-                              ),
-                              GreenButton(
-                                  onPressed: () {
-                                    Navigator.pushNamed(context, '/login');
-                                  },
-                                  width: 200,
-                                  height: 65,
-                                  text: "Daftar"),
-                            ],
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const SizedBox(
-                                height: 46,
-                              ),
-                              const Text(
-                                "Lengkapi Dokumen",
-                                style: TextStyle(
+                                Text(
+                                  "Buat Akun Terlebih Dahulu Jika Belum Punya",
+                                  style: TextStyle(
                                     fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w500,
                                     fontSize: 28,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              const Text(
-                                "Lengkapi dokumen seperti KTP, Foto pas 4x6, Ijazah, dll",
-                                style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromRGBO(93, 108, 116, 1),
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const SizedBox(
-                                height: 46,
-                              ),
-                              Text(
-                                "Daftar Program",
-                                style: TextStyle(
+                                GreenButton(
+                                    onPressed: () {
+                                      Navigator.pushNamed(context, '/login');
+                                    },
+                                    width: 200,
+                                    height: 65,
+                                    text: "Daftar"),
+                              ],
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(
+                                  height: 46,
+                                ),
+                                const Text(
+                                  "Lengkapi Dokumen",
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                const Text(
+                                  "Lengkapi dokumen seperti KTP, Foto pas 4x6, Ijazah, dll",
+                                  style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              Text(
-                                "Daftar program pelatihan atau pekerjaan boleh mendaftar lebih dari satu",
-                                style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromRGBO(93, 108, 116, 1),
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(93, 108, 116, 1),
+                                  ),
                                 ),
-                              )
-                            ],
-                          ),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const SizedBox(
-                                height: 46,
-                              ),
-                              Text(
-                                "Tunggu Respon Dari Perusahaan",
-                                style: TextStyle(
+                              ],
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(
+                                  height: 46,
+                                ),
+                                Text(
+                                  "Daftar Program",
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                Text(
+                                  "Daftar program pelatihan atau pekerjaan boleh mendaftar lebih dari satu",
+                                  style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              Text(
-                                "Setelah daftar program silahkan tunggu sampai mendapatkan respon",
-                                style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromRGBO(93, 108, 116, 1),
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(93, 108, 116, 1),
+                                  ),
+                                )
+                              ],
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(
+                                  height: 46,
                                 ),
-                              )
-                            ],
-                          ),
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const SizedBox(
-                                height: 46,
-                              ),
-                              Text(
-                                "Jalankan Aktivitas",
-                                style: TextStyle(
+                                Text(
+                                  "Tunggu Respon Dari Perusahaan",
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                Text(
+                                  "Setelah daftar program silahkan tunggu sampai mendapatkan respon",
+                                  style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              Text(
-                                "Jika telah diterima Selamat anda sudah masuk ke p",
-                                style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color.fromRGBO(93, 108, 116, 1),
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(93, 108, 116, 1),
+                                  ),
+                                )
+                              ],
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const SizedBox(
+                                  height: 46,
                                 ),
-                              )
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 100,
-                          ),
-                        ],
+                                Text(
+                                  "Jalankan Aktivitas",
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                Text(
+                                  "Jika telah diterima Selamat anda sudah masuk ke p",
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(93, 108, 116, 1),
+                                  ),
+                                )
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 100,
+                            ),
+                          ],
+                        ),
                       )
                     ],
                   ),
