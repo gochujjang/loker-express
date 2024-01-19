@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
   static const imagePath = "assets/images/banner_homepage.png";
   @override
   Widget build(BuildContext context) {
+    const Color semiTransparentColor = Color.fromRGBO(0, 0, 0, 0.500);
     return Scaffold(
       backgroundColor: Colors.white10,
       appBar: PreferredSize(
@@ -45,6 +46,10 @@ class HomePage extends StatelessWidget {
                           fit: BoxFit.cover,
                           opacity: 0.8,
                           scale: 2.0,
+                          colorFilter: ColorFilter.mode(
+                            semiTransparentColor,
+                            BlendMode.darken,
+                          ),
                           // colorFilter: ColorFilter.srgbToLinearGamma()
                         ),
                       ),
@@ -94,9 +99,13 @@ class HomePage extends StatelessWidget {
               ),
             ]),
             Container(
-                height: 600,
                 width: 1440,
-                margin: const EdgeInsets.only(left: 100, top: 100, right: 100),
+                margin: const EdgeInsets.only(
+                  left: 100,
+                  top: 100,
+                  right: 100,
+                  bottom: 100,
+                ),
                 child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -277,7 +286,7 @@ class HomePage extends StatelessWidget {
             ),
             //Cara Memulai
             Container(
-              margin: const EdgeInsets.only(top: 70),
+              margin: const EdgeInsets.only(top: 100),
               padding: const EdgeInsets.symmetric(horizontal: 240),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
