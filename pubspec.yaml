@@ -20,13 +20,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets: 
-    - lib/assets/banner-homepage.jpg
-    - lib/assets/hire-me.png
-    - lib/assets/teacher-hiring.png
-    - lib/assets/earth-planet.png
-    - lib/assets/ihsan 2.png
-    - lib/assets/emtek.png
-    - lib/assets/pekerjaan-banner.png
+    - lib/assets/
 
 
 webdev:
