@@ -277,8 +277,8 @@ class HomePage extends StatelessWidget {
             ),
             //Cara Memulai
             Container(
-              margin: const EdgeInsets.only(
-                  left: 100, right: 100, top: 100, bottom: 36),
+              margin: const EdgeInsets.only(top: 70),
+              padding: const EdgeInsets.symmetric(horizontal: 240),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -289,95 +289,140 @@ class HomePage extends StatelessWidget {
                         fontSize: 40,
                         fontWeight: FontWeight.w500),
                   ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(
-                        horizontal: 100, vertical: 36),
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(bottom: 46),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Padding(
-                                    padding: EdgeInsets.only(bottom: 24),
-                                    child: Text(
-                                      "Buat Akun Terlebih Dahulu Jika Belum Punya",
-                                      textAlign: TextAlign.justify,
-                                      style: TextStyle(
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 28,
-                                      ),
-                                    ),
-                                  ),
-                                  GreenButton(
-                                      onPressed: () {
-                                        Navigator.pushNamed(context, '/login');
-                                      },
-                                      width: 200,
-                                      height: 65,
-                                      text: "Daftar"),
-                                ],
+                  Row(
+                    children: [
+                      const SizedBox(
+                        width: 100,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(
+                                height: 46,
                               ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(bottom: 46),
-                              child: Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Text(
-                                      "Lengkapi Dokumen",
-                                      style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize: 28,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                    const Text(
-                                      "Lengkapi dokumen seperti KTP, Foto pas 4x6, Ijazah, dll",
-                                      style: TextStyle(
-                                        fontFamily: 'Poppins',
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.w400,
-                                        color: Color.fromRGBO(93, 108, 116, 1),
-                                      ),
-                                    ),
-                                  ],
+                              Text(
+                                "Buat Akun Terlebih Dahulu Jika Belum Punya",
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 28,
                                 ),
                               ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.only(bottom: 46),
-                              child: const Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Daftar Program",
-                                    style: TextStyle(
-                                        fontFamily: 'Poppins',
-                                        fontSize: 28,
-                                        fontWeight: FontWeight.w500),
-                                  ),
-                                  Text(
-                                    "Daftar program pelatihan atau pekerjaan boleh mendaftar lebih dari satu",
-                                    style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color.fromRGBO(93, 108, 116, 1),
-                                    ),
-                                  )
-                                ],
+                              GreenButton(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/login');
+                                  },
+                                  width: 200,
+                                  height: 65,
+                                  text: "Daftar"),
+                            ],
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(
+                                height: 46,
                               ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  )
+                              const Text(
+                                "Lengkapi Dokumen",
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                              const Text(
+                                "Lengkapi dokumen seperti KTP, Foto pas 4x6, Ijazah, dll",
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromRGBO(93, 108, 116, 1),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(
+                                height: 46,
+                              ),
+                              Text(
+                                "Daftar Program",
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                              Text(
+                                "Daftar program pelatihan atau pekerjaan boleh mendaftar lebih dari satu",
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromRGBO(93, 108, 116, 1),
+                                ),
+                              )
+                            ],
+                          ),
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(
+                                height: 46,
+                              ),
+                              Text(
+                                "Tunggu Respon Dari Perusahaan",
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                              Text(
+                                "Setelah daftar program silahkan tunggu sampai mendapatkan respon",
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromRGBO(93, 108, 116, 1),
+                                ),
+                              )
+                            ],
+                          ),
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(
+                                height: 46,
+                              ),
+                              Text(
+                                "Jalankan Aktivitas",
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w500),
+                              ),
+                              Text(
+                                "Jika telah diterima Selamat anda sudah masuk ke p",
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromRGBO(93, 108, 116, 1),
+                                ),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 100,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ],
               ),
             )
