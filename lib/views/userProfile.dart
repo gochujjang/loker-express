@@ -8,7 +8,6 @@ class userProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(100),
         child: NavbarAfterLogin(activePage: ActivePage.Program),
@@ -37,26 +36,26 @@ class userProfile extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                      RichText(
-                        text: const TextSpan(children: [
-                          TextSpan(
-                            text: "Nama Lengkap: ",
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.bold,
-                            ),
+                    RichText(
+                      text: const TextSpan(children: [
+                        TextSpan(
+                          text: "Nama Lengkap: ",
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.bold,
                           ),
-                          TextSpan(
-                            text: "Ihsan Kurniawan",
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                            ),
+                        ),
+                        TextSpan(
+                          text: "Ihsan Kurniawan",
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400,
                           ),
-                        ]),
-                      ),
+                        ),
+                      ]),
+                    ),
                     const SizedBox(
                         height: 24), // Gunakan SizedBox untuk memberikan jarak
                     RichText(
@@ -154,19 +153,29 @@ class userProfile extends StatelessWidget {
 
                     Container(
                       width: 520,
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      child: Column(
                         children: [
-                          Text(
-                            "cv.pdf",
-                            style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 16,
-                                color: Color.fromRGBO(93, 108, 116, 1),
-                                fontWeight: FontWeight.w400),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "cv.pdf",
+                                style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontSize: 16,
+                                    color: Color.fromRGBO(93, 108, 116, 1),
+                                    fontWeight: FontWeight.w400),
+                              ),
+                              TextButton(
+                                  onPressed: pickFile,
+                                  child: Text("Pilih File")),
+                            ],
                           ),
-                          TextButton(
-                                onPressed: pickFile, child: Text("Pilih File")),
+                          Container(
+                            width: double.infinity,
+                            height: 1,
+                            decoration: BoxDecoration(color: Colors.black),
+                          ),
                         ],
                       ),
                     ),
@@ -181,19 +190,29 @@ class userProfile extends StatelessWidget {
                     ),
                     Container(
                       width: 520,
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      child: Column(
                         children: [
-                          Text(
-                            "KTP.pdf",
-                            style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 16,
-                                color: Color.fromRGBO(93, 108, 116, 1),
-                                fontWeight: FontWeight.w400),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "KTP.pdf",
+                                style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontSize: 16,
+                                    color: Color.fromRGBO(93, 108, 116, 1),
+                                    fontWeight: FontWeight.w400),
+                              ),
+                              TextButton(
+                                  onPressed: pickFile,
+                                  child: Text("Pilih File")),
+                            ],
                           ),
-                          TextButton(
-                                onPressed: pickFile, child: Text("Pilih File")),
+                          Container(
+                            width: double.infinity,
+                            height: 1,
+                            decoration: BoxDecoration(color: Colors.black),
+                          ),
                         ],
                       ),
                     ),
@@ -208,31 +227,41 @@ class userProfile extends StatelessWidget {
                     ),
                     Container(
                       width: 520,
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      child: Column(
                         children: [
-                          Column(
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                "Sertifikat1.pdf",
-                                style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 16,
-                                    color: Color.fromRGBO(93, 108, 116, 1),
-                                    fontWeight: FontWeight.w400),
+                              Column(
+                                children: [
+                                  Text(
+                                    "Sertifikat1.pdf",
+                                    style: TextStyle(
+                                        fontFamily: "Poppins",
+                                        fontSize: 16,
+                                        color: Color.fromRGBO(93, 108, 116, 1),
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                  Text(
+                                    "Sertifikat2.pdf",
+                                    style: TextStyle(
+                                        fontFamily: "Poppins",
+                                        fontSize: 16,
+                                        color: Color.fromRGBO(93, 108, 116, 1),
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ],
                               ),
-                              Text(
-                                "Sertifikat2.pdf",
-                                style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 16,
-                                    color: Color.fromRGBO(93, 108, 116, 1),
-                                    fontWeight: FontWeight.w400),
-                              ),
+                              TextButton(
+                                  onPressed: pickFile,
+                                  child: Text("Pilih File")),
                             ],
                           ),
-                          TextButton(
-                                onPressed: pickFile, child: Text("Pilih File")),
+                          Container(
+                            width: double.infinity,
+                            height: 1,
+                            decoration: BoxDecoration(color: Colors.black),
+                          ),
                         ],
                       ),
                     ),
@@ -246,9 +275,12 @@ class userProfile extends StatelessWidget {
                             child: ElevatedButton(
                               onPressed: () {},
                               style: ButtonStyle(
-                                fixedSize: const MaterialStatePropertyAll(Size(200, 60)),
-                                shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12))),
+                                fixedSize: const MaterialStatePropertyAll(
+                                    Size(200, 60)),
+                                shape: MaterialStatePropertyAll(
+                                    RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
                                 backgroundColor: const MaterialStatePropertyAll(
                                     Color.fromRGBO(0, 30, 43, 1)),
                               ),
@@ -265,10 +297,14 @@ class userProfile extends StatelessWidget {
                             child: ElevatedButton(
                               onPressed: () {},
                               style: ButtonStyle(
-                                fixedSize: const MaterialStatePropertyAll(Size(200, 60)),
-                                shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12))),
-                                backgroundColor: const MaterialStatePropertyAll(AppColors.darkGreen),
+                                fixedSize: const MaterialStatePropertyAll(
+                                    Size(200, 60)),
+                                shape: MaterialStatePropertyAll(
+                                    RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(12))),
+                                backgroundColor: const MaterialStatePropertyAll(
+                                    AppColors.darkGreen),
                               ),
                               child: const Text(
                                 "Simpan",
