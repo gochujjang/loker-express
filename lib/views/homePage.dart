@@ -54,44 +54,45 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 100, vertical: 100),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Padding(
-                              padding: EdgeInsets.fromLTRB(50, 150, 0, 0),
-                              child: Text(
-                                "Membantu Kamu Mendapatkan Pekerjaan \ndi Sektor Agrikultur",
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                  color: Color.fromRGBO(255, 255, 255, 1),
-                                  fontFamily: 'Poppins',
-                                  fontSize: 44,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                            Text(
+                              "Membantu Kamu Mendapatkan Pekerjaan \ndi Sektor Agrikultur",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                fontFamily: 'Poppins',
+                                fontSize: 44,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
-                            const Padding(
-                              padding: EdgeInsets.fromLTRB(100, 15, 0, 15),
-                              child: Text(
-                                'Kami membantu Anda mendapatkan pekerjaan dalam bidang agrikultur, meskipun \nAnda tidak memiliki pengalaman atau pengetahuan dasar di sektor agrikultur. \nDengan pendekatan yang ramah dan pelatihan yang komprehensif, kami bertujuan \nuntuk membimbing Anda melangkah ke dalam karir dalam sektor agrikultur serta \nmembuka pintu peluang bahkan bagi mereka yang baru memasuki dunia \nprofessional.',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                  color: Color.fromRGBO(255, 255, 255, 1),
-                                  fontFamily: 'Poppins',
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                            const SizedBox(
+                              height: 24,
+                            ),
+                            Text(
+                              'Kami membantu Anda mendapatkan pekerjaan dalam bidang agrikultur, meskipun \nAnda tidak memiliki pengalaman atau pengetahuan dasar di sektor agrikultur. \nDengan pendekatan yang ramah dan pelatihan yang komprehensif, kami bertujuan \nuntuk membimbing Anda melangkah ke dalam karir dalam sektor agrikultur serta \nmembuka pintu peluang bahkan bagi mereka yang baru memasuki dunia \nprofessional.',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                fontFamily: 'Poppins',
+                                fontSize: 24,
+                                fontWeight: FontWeight.w400,
                               ),
                             ),
-                            Padding(
-                                padding: const EdgeInsets.only(left: 100),
-                                child: GreenButton(
-                                    onPressed: () {
-                                      Navigator.pushNamed(context, '/login');
-                                    },
-                                    width: 365,
-                                    height: 65,
-                                    text: "Tunjukkan Caranya"))
+                            const SizedBox(
+                              height: 43,
+                            ),
+                            GreenButton(
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/login');
+                                },
+                                width: 365,
+                                height: 65,
+                                text: "Tunjukkan Caranya")
                           ],
                         ),
                       ),
