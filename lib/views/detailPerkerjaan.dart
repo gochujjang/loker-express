@@ -14,16 +14,15 @@ class DetailPekerjaan extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: Color.fromRGBO(255, 255, 255, 1)
-          ),
+              borderRadius: BorderRadius.circular(20),
+              color: Color.fromRGBO(255, 255, 255, 1)),
           margin: EdgeInsets.symmetric(vertical: 100, horizontal: 100),
           padding: EdgeInsets.symmetric(vertical: 76, horizontal: 76),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                width: 1440,
+                width: double.infinity,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -80,6 +79,9 @@ class DetailPekerjaan extends StatelessWidget {
                   ],
                 ),
               ),
+              Divider(
+                height: 50,
+              ),
               Text(
                 "Deskripsi Pekerjaan :",
                 style: TextStyle(
@@ -98,6 +100,9 @@ class DetailPekerjaan extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                 ),
               ),
+              const SizedBox(
+                height: 32,
+              ),
               Text(
                 "Kriteria Pekerjaan :",
                 style: TextStyle(
@@ -110,51 +115,79 @@ class DetailPekerjaan extends StatelessWidget {
                 shrinkWrap: true, // Set shrinkWrap to true
                 children: [
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Pendidikan minimal SMA atau sederajat",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Pendidikan minimal SMA atau sederajat",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Sudah mengikuti pelatihan dari company",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Sudah mengikuti pelatihan dari company",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Kemampuan operasional untuk menggunakan peralatan pertanian dan alat bantu yang diperlukan.",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Kemampuan operasional untuk menggunakan peralatan pertanian dan alat bantu yang diperlukan.",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Kemampuan bekerja secara efektif dalam tim, terutama dengan tim pertanian untuk memastikan kesiapan operasional peralatan.",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Kemampuan bekerja secara efektif dalam tim, terutama dengan tim pertanian untuk memastikan kesiapan operasional peralatan.",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Fleksibilitas untuk bekerja di lapangan dan kesiapan untuk bekerja secara fleksibel sesuai kebutuhan operasional.",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Fleksibilitas untuk bekerja di lapangan dan kesiapan untuk bekerja secara fleksibel sesuai kebutuhan operasional.",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 32,
               ),
               Text(
                 "Benerfit Pekerjaan :",
@@ -168,49 +201,74 @@ class DetailPekerjaan extends StatelessWidget {
                 shrinkWrap: true, // Set shrinkWrap to true
                 children: [
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Gaji sebesar Rp.7.000.000,00",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Gaji sebesar Rp.7.000.000,00",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Asuransi Kesehatan dan Jiwa",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Asuransi Kesehatan dan Jiwa",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Fasilitas Kesejahteraan Karyawan",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Fasilitas Kesejahteraan Karyawan",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Bonus Kinerja",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Bonus Kinerja",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.circle, size: 10,),
-                    title: Text("Peluang Pengembangan Karir",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    leading: Icon(
+                      Icons.circle,
+                      size: 10,
+                    ),
+                    title: Text(
+                      "Peluang Pengembangan Karir",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                 ],
               ),
