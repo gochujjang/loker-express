@@ -134,159 +134,167 @@ class HomePage extends StatelessWidget {
                     )
                   ],
                 )),
-            const Text(
-              "Sektor Agrikultur Adalah Masa Depan",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                fontSize: 40,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+            Column(
               children: [
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                  child: Card(
-                      color: Colors.white,
-                      elevation: 30,
-                      child: SizedBox(
-                          width: 400,
-                          height: 400,
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 36),
-                            child: Column(
-                              children: [
-                                Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 32,
-                                      bottom: 32,
-                                    ),
-                                    child: Image.asset(
-                                      "lib/assets/hire-me.png",
-                                      width: 120,
-                                      height: 120,
-                                      alignment: Alignment.center,
-                                    )),
-                                const Padding(
-                                  padding: EdgeInsets.only(bottom: 32),
-                                  child: Text(
-                                    "Stabilitas dan Keamanan",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ),
-                                const Padding(
-                                    padding:
-                                        EdgeInsets.only(left: 37, right: 37),
-                                    child: Text(
-                                      "Agrikultur adalah industri pokok yang memainkan peran penting dalam menjaga keberlanjutan masyarakat dan negara yang menjadikan sektor ini selalu di butuhkan",
-                                      textAlign: TextAlign.center,
-                                    ))
-                              ],
-                            ),
-                          ))),
+                const Text(
+                  "Sektor Agrikultur Adalah Masa Depan",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 40,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Card(
-                      color: Colors.white,
-                      elevation: 30,
-                      child: SizedBox(
-                          width: 400,
-                          height: 400,
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 36),
-                            child: Column(
-                              children: [
-                                Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 32,
-                                      bottom: 32,
-                                    ),
-                                    child: Image.asset(
-                                      "lib/assets/earth-planet.png",
-                                      width: 120,
-                                      height: 120,
-                                      alignment: Alignment.center,
-                                    )),
-                                const Padding(
-                                  padding: EdgeInsets.only(bottom: 32),
-                                  child: Text(
-                                    "Stabilitas dan Keamanan",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ),
-                                const Padding(
-                                    padding:
-                                        EdgeInsets.only(left: 37, right: 37),
-                                    child: Text(
-                                      "Agrikultur adalah industri pokok yang memainkan peran penting dalam menjaga keberlanjutan masyarakat dan negara yang menjadikan sektor ini selalu di butuhkan",
-                                      textAlign: TextAlign.center,
-                                    ))
-                              ],
-                            ),
-                          ))),
+                const SizedBox(
+                  height: 100,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Card(
-                      color: Colors.white,
-                      elevation: 10,
-                      child: SizedBox(
-                          width: 400,
-                          height: 400,
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 36),
-                            child: Column(
-                              children: [
-                                Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 32,
-                                      bottom: 32,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 20),
+                      child: Card(
+                          color: Colors.white,
+                          elevation: 30,
+                          child: SizedBox(
+                              width: 400,
+                              height: 400,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 36),
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                        padding: const EdgeInsets.only(
+                                          top: 32,
+                                          bottom: 32,
+                                        ),
+                                        child: Image.asset(
+                                          "lib/assets/hire-me.png",
+                                          width: 120,
+                                          height: 120,
+                                          alignment: Alignment.center,
+                                        )),
+                                    const Padding(
+                                      padding: EdgeInsets.only(bottom: 32),
+                                      child: Text(
+                                        "Stabilitas dan Keamanan",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
                                     ),
-                                    child: Image.asset(
-                                      "lib/assets/teacher-hiring.png",
-                                      width: 120,
-                                      height: 120,
-                                      alignment: Alignment.center,
-                                    )),
-                                const Padding(
-                                  padding: EdgeInsets.only(bottom: 32),
-                                  child: Text(
-                                    "Stabilitas dan Keamanan",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 37, right: 37),
+                                        child: Text(
+                                          "Agrikultur adalah industri pokok yang memainkan peran penting dalam menjaga keberlanjutan masyarakat dan negara yang menjadikan sektor ini selalu di butuhkan",
+                                          textAlign: TextAlign.center,
+                                        ))
+                                  ],
                                 ),
-                                const Padding(
-                                    padding:
-                                        EdgeInsets.only(left: 37, right: 37),
-                                    child: Text(
-                                      "Agrikultur adalah industri pokok yang memainkan peran penting dalam menjaga keberlanjutan masyarakat dan negara yang menjadikan sektor ini selalu di butuhkan",
-                                      textAlign: TextAlign.center,
-                                    ))
-                              ],
-                            ),
-                          ))),
+                              ))),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Card(
+                          color: Colors.white,
+                          elevation: 30,
+                          child: SizedBox(
+                              width: 400,
+                              height: 400,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 36),
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                        padding: const EdgeInsets.only(
+                                          top: 32,
+                                          bottom: 32,
+                                        ),
+                                        child: Image.asset(
+                                          "lib/assets/earth-planet.png",
+                                          width: 120,
+                                          height: 120,
+                                          alignment: Alignment.center,
+                                        )),
+                                    const Padding(
+                                      padding: EdgeInsets.only(bottom: 32),
+                                      child: Text(
+                                        "Permintaan Global",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 37, right: 37),
+                                        child: Text(
+                                          "Permintaan dunia akan produksi pangan yang terus meningkat membuka potensi pasar kerja yang luas dan berpenghasilan tinggi",
+                                          textAlign: TextAlign.center,
+                                        ))
+                                  ],
+                                ),
+                              ))),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Card(
+                          color: Colors.white,
+                          elevation: 10,
+                          child: SizedBox(
+                              width: 400,
+                              height: 400,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 36),
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                        padding: const EdgeInsets.only(
+                                          top: 32,
+                                          bottom: 32,
+                                        ),
+                                        child: Image.asset(
+                                          "lib/assets/teacher-hiring.png",
+                                          width: 120,
+                                          height: 120,
+                                          alignment: Alignment.center,
+                                        )),
+                                    const Padding(
+                                      padding: EdgeInsets.only(bottom: 32),
+                                      child: Text(
+                                        "Peluang Berwirausaha",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 37, right: 37),
+                                        child: Text(
+                                          "Sektor pertanian memberikan platform bagi individu untuk menjelajahi usaha berwirausaha.",
+                                          textAlign: TextAlign.center,
+                                        ))
+                                  ],
+                                ),
+                              ))),
+                    ),
+                  ],
                 ),
               ],
             ),
+
             //Cara Memulai
             Container(
               margin: const EdgeInsets.only(top: 100),
