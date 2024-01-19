@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                     ),
                     child: Container(
                       height: 700,
-                      width: 1440,
+                      width: double.infinity,
                       alignment: Alignment.centerLeft,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
@@ -54,46 +54,48 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 100, vertical: 100),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Membantu Kamu Mendapatkan Pekerjaan \ndi Sektor Agrikultur",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: Color.fromRGBO(255, 255, 255, 1),
-                                fontFamily: 'Poppins',
-                                fontSize: 44,
-                                fontWeight: FontWeight.w500,
+                        margin: const EdgeInsets.only(left: 140),
+                        padding: const EdgeInsets.only(top: 100, left: 100),
+                        child: Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Membantu Kamu Mendapatkan Pekerjaan \ndi Sektor Agrikultur",
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  color: Color.fromRGBO(255, 255, 255, 1),
+                                  fontFamily: 'Poppins',
+                                  fontSize: 44,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 24,
-                            ),
-                            Text(
-                              'Kami membantu Anda mendapatkan pekerjaan dalam bidang agrikultur, meskipun \nAnda tidak memiliki pengalaman atau pengetahuan dasar di sektor agrikultur. \nDengan pendekatan yang ramah dan pelatihan yang komprehensif, kami bertujuan \nuntuk membimbing Anda melangkah ke dalam karir dalam sektor agrikultur serta \nmembuka pintu peluang bahkan bagi mereka yang baru memasuki dunia \nprofessional.',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: Color.fromRGBO(255, 255, 255, 1),
-                                fontFamily: 'Poppins',
-                                fontSize: 24,
-                                fontWeight: FontWeight.w400,
+                              const SizedBox(
+                                height: 24,
                               ),
-                            ),
-                            const SizedBox(
-                              height: 43,
-                            ),
-                            GreenButton(
-                                onPressed: () {
-                                  Navigator.pushNamed(context, '/login');
-                                },
-                                width: 365,
-                                height: 65,
-                                text: "Tunjukkan Caranya")
-                          ],
+                              Text(
+                                'Kami membantu Anda mendapatkan pekerjaan dalam bidang agrikultur, meskipun \nAnda tidak memiliki pengalaman atau pengetahuan dasar di sektor agrikultur. \nDengan pendekatan yang ramah dan pelatihan yang komprehensif, kami bertujuan \nuntuk membimbing Anda melangkah ke dalam karir dalam sektor agrikultur serta \nmembuka pintu peluang bahkan bagi mereka yang baru memasuki dunia \nprofessional.',
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  color: Color.fromRGBO(255, 255, 255, 1),
+                                  fontFamily: 'Poppins',
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 43,
+                              ),
+                              GreenButton(
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/login');
+                                  },
+                                  width: 365,
+                                  height: 65,
+                                  text: "Tunjukkan Caranya")
+                            ],
+                          ),
                         ),
                       ),
                     )),
